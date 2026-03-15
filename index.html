@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick & Morty Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header class = "header">
+    <h1>Explorador Rick & Morty </h1>
+</header>
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+        <select id = "statusFilter">
+            <option value="">Filtrar por estado</option>
+            <option value="alive">Vivo</option>
+            <option value="dead">Muerto</option>
+            <option value="unknown">Desconocido</option>
+        </select>
+    </div>
+    <div class="spinner-container hidden" id="spinner">
+        <div class="spinner"></div>
+    </div>
+        <p class="error-message hidden" id="error-message">
+                Algo salió mal. Inténtalo de nuevo.
+        </p>
+    <div id="characterContainer" class="characters-grid"></div>
+    <div class = "load-more-container">
+        <button class ="btn" id="loadMoreBtn">Cargar más</button>
+    </div>
+    <div class="modal-overlay hidden" id= "modalOverlay">
+        <div class="modal" id="characterModal">
+            <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+        <div class="modal-body">
+        </div>
+        </div>
+    </div>
+    <script src="main.js"></script> 
+</body>
+</html>
